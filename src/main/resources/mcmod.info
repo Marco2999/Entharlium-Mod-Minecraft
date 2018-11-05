@@ -1,0 +1,16 @@
+[
+{
+	"modid": "em",
+	"name": "Entharlium Mod",
+	"description": "Entharlium things!",
+	"version": "1.0",
+	"mc version": "1.12.2",
+	"url": "",
+	"updateUrl": "",
+	"authorList": ["Marcos A. Camacho", "Francisco Saltiel"],
+	"credits": "Marcos A. Camacho and Francisco Saltiel",
+	"logofile": "",
+	"screenshots": [],
+	"dependencies": []
+}
+]
