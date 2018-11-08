@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shapeless",
+ 
+    "ingredients":
+    [
+ 
+    {
+      "item": "minecraft:diamond"
+    },
+ 
+    {
+      "item": "minecraft:emerald"
+    }
+   
+    ],
+ 
+    "result":
+    {
+        "item": "em:entharlium_gem",
+        "count": 1
+    }
+}

@@ -1,4 +1,8 @@
 
 //Items
 item.entharlium_mix.name=Entharlium Mix
+item.entharlium_gem.name=Entharlium Gem
+
+//Blocks
 tile.entharlium_furnace.name=Entharlium Furnace
+
