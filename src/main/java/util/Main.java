@@ -1,5 +1,6 @@
 package util;
 
+import EntharliumMod.init.ModRecipes;
 import EntharliumMod.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -26,6 +27,7 @@ public class Main {
 	@EventHandler
 	public static void init(FMLInitializationEvent event){
 		
+		ModRecipes.init();
 	}
 	@EventHandler
 	public static void Postinit(FMLPostInitializationEvent event){

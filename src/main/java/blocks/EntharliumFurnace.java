@@ -12,7 +12,6 @@ public class EntharliumFurnace extends BlockBase {
 		setHardness(3.5f);
 		setResistance(17.5f);
 		setHarvestLevel("pickaxe", 1);
-		setLightLevel(13.0f);
 	}
 	
 }
