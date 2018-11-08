@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+ 
+    "ingredients":
+    [
+ 
+    {
+      "item": "em:entharlium_block"
+    }
+   
+    ],
+ 
+    "result":
+    {
+        "item": "em:entharlium_gem",
+        "count": 9
+    }
+}

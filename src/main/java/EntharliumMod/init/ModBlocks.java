@@ -13,4 +13,5 @@ public class ModBlocks {
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
 	
 	public static final Block ENTHARLIUM_FURNACE = new EntharliumFurnace("entharlium_furnace", Material.ROCK);
+	public static final Block ENTHARLIUM_BLOCK = new EntharliumFurnace("entharlium_block", Material.IRON);
 }
