@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " E ",
+        " E ",
+        " S "
+    ],
+   
+    "key":
+    {
+        "E":
+        {
+            "item": "em:entharlium_gem"
+        },
+        
+        "S":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "em:entharlium_sword",
+        "count": 1
+    }
+}

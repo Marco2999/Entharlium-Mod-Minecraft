@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "CCC",
+        "CEC",
+        "CCC"
+    ],
+   
+    "key":
+    {
+        "E":
+        {
+            "item": "em:entharlium_mix"
+        },
+        
+        "C":
+        {
+            "item": "minecraft:cobblestone"
+        }
+    },
+   
+    "result":
+    {
+        "item": "em:entharlium_furnace",
+        "count": 1
+    }
+}

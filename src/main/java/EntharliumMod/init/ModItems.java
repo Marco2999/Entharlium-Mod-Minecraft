@@ -20,7 +20,7 @@ public class ModItems {
 	public static final Item ENTHARLIUM_GEM = new ItemBase("entharlium_gem");
 	
 	//Material
-	public static final ToolMaterial MATERIAL_ENTHARLIUM = EnumHelper.addToolMaterial("material_entharlium", 3, 3122, 12.0f, 4.0f, 10);
+	public static final ToolMaterial MATERIAL_ENTHARLIUM = EnumHelper.addToolMaterial("material_entharlium", 3, 3122, 12.0f, 6.0f, 10);
 	
 	//Tools
 	public static final ItemSword ENTHARLIUM_SWORD =  new ToolSword("entharlium_sword", MATERIAL_ENTHARLIUM);
