@@ -4,6 +4,11 @@ item.entharlium_mix.name=Entharlium Mix
 item.entharlium_gem.name=Entharlium Gem
 item.entharlium_sword.name=Entharlium Sword
 
+item.entharlium_helmet.name=Entharlium Helmet
+item.entharlium_leggings.name=Entharlium Leggings
+item.entharlium_chestplate.name=Entharlium Chestplate
+item.entharlium_boots.name=Entharlium Boots
+
 //Blocks
 tile.entharlium_furnace.name=Entharlium Furnace
 tile.entharlium_block.name=Entharlium Block
