@@ -1,13 +1,22 @@
 
 //Items
+
+	//Materials
 item.entharlium_mix.name=Entharlium Mix
 item.entharlium_gem.name=Entharlium Gem
-item.entharlium_sword.name=Entharlium Sword
 
+	//Armor
 item.entharlium_helmet.name=Entharlium Helmet
 item.entharlium_leggings.name=Entharlium Leggings
 item.entharlium_chestplate.name=Entharlium Chestplate
 item.entharlium_boots.name=Entharlium Boots
+	
+	//Tools
+item.entharlium_sword.name=Entharlium Sword
+item.entharlium_pickaxe.name=Entharlium Pickaxe
+item.entharlium_shovel.name=Entharlium Shovel
+item.entharlium_axe.name=Entharlium Axe
+item.entharlium_hoe.name=Entharlium Hoe
 
 //Blocks
 tile.entharlium_furnace.name=Entharlium Furnace

@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "   ",
+        "E E",
+        "E E"
+    ],
+   
+    "key":
+    {
+        "E":
+        {
+            "item": "em:entharlium_gem"
+        }
+    },
+   
+    "result":
+    {
+        "item": "em:entharlium_boots",
+        "count": 1
+    }
+}
