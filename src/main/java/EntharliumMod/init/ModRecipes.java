@@ -8,5 +8,6 @@ public class ModRecipes {
 	public static void init() {
 		
 		GameRegistry.addSmelting(ModItems.ENTHARLIUM_MIX, new ItemStack(ModItems.ENTHARLIUM_GEM, 1), 1.0f);
+		GameRegistry.addSmelting(ModBlocks.ENTHARLIUM_ORE, new ItemStack(ModItems.ENTHARLIUM_GEM, 1), 1.0f);
 	}
 }

@@ -9,6 +9,8 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import world.ModWorldGen;
 
 @Mod (modid = reference.MOD_ID, name = reference.NAME, version = reference.VERSION)
 public class Main {
@@ -22,6 +24,7 @@ public class Main {
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event){
 		
+		GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
 	}
 	
 	@EventHandler
