@@ -18,6 +18,9 @@ item.entharlium_shovel.name=Entharlium Shovel
 item.entharlium_axe.name=Entharlium Axe
 item.entharlium_hoe.name=Entharlium Hoe
 
+	//Shield
+item.entharlium_shield.name=Entharlium Shield
+
 //Blocks
 tile.entharlium_furnace.name=Entharlium Furnace
 tile.entharlium_block.name=Entharlium Block

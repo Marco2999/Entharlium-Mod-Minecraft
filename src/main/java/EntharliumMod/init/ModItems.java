@@ -8,6 +8,7 @@ import EntharliumMod.items.armor.ArmorBase;
 import EntharliumMod.items.tools.ToolAxe;
 import EntharliumMod.items.tools.ToolHoe;
 import EntharliumMod.items.tools.ToolPickaxe;
+import EntharliumMod.items.tools.ToolShield;
 import EntharliumMod.items.tools.ToolSpade;
 import EntharliumMod.items.tools.ToolSword;
 import net.minecraft.init.SoundEvents;
@@ -19,6 +20,7 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemSpade;
 import net.minecraftforge.common.util.EnumHelper;
 import util.reference;
@@ -43,6 +45,8 @@ public class ModItems {
 	public static final ItemSpade ENTHARLIUM_SHOVEL =  new ToolSpade("entharlium_shovel", MATERIAL_ENTHARLIUM);
 	public static final ItemAxe ENTHARLIUM_AXE =  new ToolAxe("entharlium_axe", MATERIAL_ENTHARLIUM);
 	public static final ItemHoe ENTHARLIUM_HOE=  new ToolHoe("entharlium_hoe", MATERIAL_ENTHARLIUM);
+	
+	public static final ItemShield ENTHARLIUM_SHIELD=  new ToolShield("entharlium_shield", MATERIAL_ENTHARLIUM);
 	
 	//Armor
 	public static final Item ENTHARLIUM_HELMET = new ArmorBase("entharlium_helmet", ARMOR_MATERIAL_ENTHARLIUM, 1, EntityEquipmentSlot.HEAD);
