@@ -7,6 +7,7 @@ import blocks.BlockBase;
 import blocks.EntharliumBlock;
 import blocks.EntharliumFurnace;
 import blocks.EntharliumOre;
+import blocks.TPBlock.TeleportationBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -17,4 +18,5 @@ public class ModBlocks {
 	public static final Block ENTHARLIUM_FURNACE = new EntharliumFurnace("entharlium_furnace", Material.ROCK);
 	public static final Block ENTHARLIUM_BLOCK = new EntharliumBlock("entharlium_block", Material.IRON);
 	public static final Block ENTHARLIUM_ORE = new EntharliumOre("entharlium_ore", Material.ROCK);
+	public static final Block TELEPORTATION_BLOCK = new TeleportationBlock("teleportation_block", Material.IRON);
 }
