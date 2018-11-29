@@ -25,6 +25,7 @@ public class Main {
 	public static void PreInit(FMLPreInitializationEvent event){
 		
 		GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
+		proxy.registerTileEntities();
 	}
 	
 	@EventHandler
