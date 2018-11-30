@@ -10,7 +10,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import util.IHasModel;
@@ -39,10 +38,9 @@ public class TeleportationBlock extends BlockBase implements IHasModel, ITileEnt
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn,
 			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {	
-//		if(!worldIn.isRemote) {
-//			playerIn.openGui(util.Main.instance, GuiHandler.TELEPORTATION_BLOCK, worldIn, pos.getX(), pos.getY(), pos.getZ());
-//		}
-		getTileEntity(worldIn, pos).findNearestTeleportationBlock(pos, worldIn, getTileEntity(worldIn, pos).getId());
+		if(!worldIn.isRemote) {
+			playerIn.openGui(util.Main.instance, GuiHandler.TELEPORTATION_BLOCK, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		}
 		return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);
 	}
 
