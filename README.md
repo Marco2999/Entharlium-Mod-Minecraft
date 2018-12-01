@@ -22,6 +22,7 @@ This mod features new items and new gear to be made out of the items:
 And most important, the Teleporter Block.
 Using different items (Entharlium Gem, Diamond, Emerald, Gold, and Iron), give your teleporter power to teleport you away!
 The different items give your teleporter different power:
+
 	- Entharlium Gem: 100 power
 	- Diamond: 25 power
 	- Emerald: 25 power
