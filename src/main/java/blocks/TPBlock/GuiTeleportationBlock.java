@@ -34,5 +34,6 @@ public class GuiTeleportationBlock extends GuiContainer{
 		String s = I18n.format("container.teleportation_block"); 
 		this.mc.fontRenderer.drawString(s, this.xSize / 2 - this.mc.fontRenderer.getStringWidth(s) / 2, 6, 4210752);
 		this.mc.fontRenderer.drawString(this.playerInv.getDisplayName().getFormattedText(), 8, 72, 4210752);
+		this.mc.fontRenderer.drawString("Power: " + te.usageLeft, 100, 40, 4210752);
 	}
 }

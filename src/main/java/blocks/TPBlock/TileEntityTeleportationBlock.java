@@ -1,6 +1,8 @@
 package blocks.TPBlock;
 
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -29,18 +31,8 @@ public class TileEntityTeleportationBlock extends TileEntity implements ITickabl
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
-		NBTTagList list = new NBTTagList();
-		for(int slot = 0; slot < handler.getSlots(); slot++) {
-			if(handler.getStackInSlot(slot) != ItemStack.EMPTY) {
-				NBTTagCompound stackTag = new NBTTagCompound();
-				stackTag.setByte("Slot", (byte) slot);
-				handler.getStackInSlot(slot).writeToNBT(stackTag);
-				list.appendTag(stackTag);
-			}
-		}
-		nbt.setTag("Items", list);
 		nbt.setLong("usageLeft", usageLeft);
-		nbt.setLong("id", id);
+//		nbt.setLong("id", id);
 
 		nbt.setTag("ItemStackHandler", this.handler.serializeNBT());
 
@@ -49,15 +41,8 @@ public class TileEntityTeleportationBlock extends TileEntity implements ITickabl
 
 	@Override
 	public void readFromNBT(NBTTagCompound nbt) {
-		NBTTagList list = nbt.getTagList("Items", 10);
 		usageLeft = (int) nbt.getLong("usageLeft");
-		id = (int) nbt.getLong("id");
-
-		for(int i = 0; i < list.tagCount(); i++) {
-			NBTTagCompound stackTag = list.getCompoundTagAt(i);
-			int slot = stackTag.getByte("Slot") & 255;
-			((IInventory) handler).setInventorySlotContents(slot, new ItemStack(stackTag));
-		}
+//		id = (int) nbt.getLong("id");
 
 		this.handler.deserializeNBT(nbt.getCompoundTag("ItemStackHandler"));
 
@@ -67,8 +52,28 @@ public class TileEntityTeleportationBlock extends TileEntity implements ITickabl
 	@Override
 	public void update() {		
 
-
-		//		markDirty();
+		if(!handler.getStackInSlot(0).isEmpty()) {
+			if(handler.getStackInSlot(0).getItem().equals(EntharliumMod.init.ModItems.ENTHARLIUM_GEM)) {
+				usageLeft += 100 * handler.getStackInSlot(0).getCount();
+				handler.setStackInSlot(0, ItemStack.EMPTY);
+			}
+			if(handler.getStackInSlot(0).getItem().equals(Items.DIAMOND)) {
+				usageLeft += 25 * handler.getStackInSlot(0).getCount();
+				handler.setStackInSlot(0, ItemStack.EMPTY);
+			}
+			if(handler.getStackInSlot(0).getItem().equals(Items.EMERALD)) {
+				usageLeft += 25 * handler.getStackInSlot(0).getCount();
+				handler.setStackInSlot(0, ItemStack.EMPTY);
+			}
+			if(handler.getStackInSlot(0).getItem().equals(Items.GOLD_INGOT)) {
+				usageLeft += 5 * handler.getStackInSlot(0).getCount();
+				handler.setStackInSlot(0, ItemStack.EMPTY);
+			}if(handler.getStackInSlot(0).getItem().equals(Items.IRON_INGOT)) {
+				usageLeft += 4 * handler.getStackInSlot(0).getCount();
+				handler.setStackInSlot(0, ItemStack.EMPTY);
+			}
+			markDirty();
+		}
 	}
 
 
