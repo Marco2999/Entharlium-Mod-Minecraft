@@ -8,7 +8,16 @@ This mod features new items and new gear to be made out of the items:
 	- Entharlium Gems for crafting (beauty in your hands).
 	- Entharlium Mix made out of Diamond and Emerald, smelt it to make Entharlium Gem (comes in handy).
 	- Full set of Entharlium armor (bright, orange, and unstoppable!).
+		- Entharlium Helmet
+		- Entharlium Chestplate
+		- Entharlium Leggings
+		- Entharlium Boots
 	- Full set of Entharlium tools (useful!).
+		- Entharlium Sword
+		- Entharlium Pickaxe
+		- Entharlium Shovel
+		- Entharlium Axe
+		- Entharlium Hoe
 
 And most important, the Teleporter Block.
 Using different items (Entharlium Gem, Diamond, Emerald, Gold, and Iron), give your teleporter power to teleport you away!
