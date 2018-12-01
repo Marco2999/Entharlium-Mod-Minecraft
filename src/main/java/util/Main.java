@@ -15,7 +15,7 @@ import world.ModWorldGen;
 @Mod (modid = reference.MOD_ID, name = reference.NAME, version = reference.VERSION)
 public class Main {
 	
-	@Instance 
+	@Instance(reference.MOD_ID)
 	public static Main instance;
 	
 	@SidedProxy(clientSide = reference.CLIENT_PROXY_CLASS, serverSide = reference.COMMON_PROXY_CLASS)
@@ -30,7 +30,7 @@ public class Main {
 	
 	@EventHandler
 	public static void init(FMLInitializationEvent event){
-		
+		proxy.registerNetworkStuff();
 		ModRecipes.init();
 	}
 	@EventHandler

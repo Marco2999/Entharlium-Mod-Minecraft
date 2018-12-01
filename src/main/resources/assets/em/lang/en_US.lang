@@ -28,4 +28,4 @@ tile.entharlium_ore.name=Entharlium Ore
 tile.teleportation_block.name=Teleportation Block
 
 //Container
-container.block_breaker=Block Breaker
+container.teleportation_block=Teleportation Block
