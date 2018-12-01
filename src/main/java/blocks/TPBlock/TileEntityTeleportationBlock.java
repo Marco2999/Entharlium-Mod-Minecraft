@@ -1,5 +1,13 @@
 package blocks.TPBlock;
 
+import com.sun.jna.platform.unix.X11.Display;
+
+import EntharliumMod.init.ModBlocks;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -67,8 +75,6 @@ public class TileEntityTeleportationBlock extends TileEntity implements ITickabl
 	@Override
 	public void update() {		
 
-
-		//		markDirty();
 	}
 
 
@@ -89,7 +95,7 @@ public class TileEntityTeleportationBlock extends TileEntity implements ITickabl
 	public NBTTagCompound getUpdateTag() {
 		NBTTagCompound nbt = new NBTTagCompound();
 		this.writeToNBT(nbt);
-		return nbt;
+		return nbt; 
 	}
 
 	@Override
@@ -121,37 +127,33 @@ public class TileEntityTeleportationBlock extends TileEntity implements ITickabl
 	}
 
 	public double distanceTo(BlockPos pos, BlockPos pos2) {
-		return Math.sqrt((pos.getX() - pos2.getX())^2 + (pos.getY() - pos2.getY())^2 + (pos.getZ() - pos2.getZ())^2);
+		return Math.sqrt((pos.getX() - pos2.getX())^2 + (pos.getZ() - pos2.getZ())^2);
 	}
 
-	public TileEntityTeleportationBlock findNearestTeleportationBlock(BlockPos pos, World world,  int teleportID){
+	public TileEntityTeleportationBlock findNearestTeleportationBlock(BlockPos pos, World world,  int teleportID, EntityPlayer player){
 		TileEntityTeleportationBlock nearest = null;
 		for(TileEntity te : world.loadedTileEntityList){
 			if(te instanceof TileEntityTeleportationBlock){
 				TileEntityTeleportationBlock tele = (TileEntityTeleportationBlock)te;
-				//	            if(tele.getId() == teleportID)
-				//	                continue;
 
-				if((nearest == null) && (!pos.equals(tele.pos))){
-					nearest = tele;
-					continue;
-				}
-
-				if((!pos.equals(tele.pos)) && (distanceTo(tele.pos, pos) < distanceTo(nearest.pos, tele.pos))){
-					nearest = tele;
+				if(!pos.equals(tele.pos)){ 
+					if (player.getHeldItemMainhand().getItem() == Items.STICK) {
+						if(pos.distanceSq(te.getPos().getX(), te.getPos().getY(), te.getPos().getZ()) <= 30) {
+							if(nearest == null) {
+							nearest = (TileEntityTeleportationBlock) te;			
+							player.setPosition(te.getPos().getX(), te.getPos().getY()+1, te.getPos().getZ());
+						}else {
+							if(pos.distanceSq(te.getPos().getX(), te.getPos().getY(), te.getPos().getZ()) <= pos.distanceSq(nearest.getPos().getX(), nearest.getPos().getY(), nearest.getPos().getZ())) {
+								nearest = (TileEntityTeleportationBlock) te;
+								player.setPosition(te.getPos().getX(), te.getPos().getY()+1, te.getPos().getZ());
+							}
+						}
+						
+					}					
 				}
 			}
 		}
-
-
-		// testing
-		if(nearest != null) {
-			System.out.println("nearest: " + nearest.getPos());
-			System.out.println("block: " +  pos);
-		}
-		else {System.out.println("null");}
-		//
-
+	}
 		return nearest;
 	}
 
