@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " S ",
+        " E ",
+        " S "
+    ],
+   
+    "key":
+    {
+        "E":
+        {
+            "item": "em:entharlium_gem"
+        },
+        
+        "S":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "em:teleport_wand",
+        "count": 1
+    }
+}

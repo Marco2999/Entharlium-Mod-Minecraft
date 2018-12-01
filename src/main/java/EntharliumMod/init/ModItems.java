@@ -11,6 +11,7 @@ import EntharliumMod.items.tools.ToolPickaxe;
 import EntharliumMod.items.tools.ToolShield;
 import EntharliumMod.items.tools.ToolSpade;
 import EntharliumMod.items.tools.ToolSword;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -31,8 +32,9 @@ public class ModItems {
 	
 	
 	//Items
-	public static final Item ENTHARLIUM_MIX = new ItemBase("entharlium_mix");
-	public static final Item ENTHARLIUM_GEM = new ItemBase("entharlium_gem");
+	public static final Item ENTHARLIUM_MIX = new ItemBase("entharlium_mix", CreativeTabs.MATERIALS);
+	public static final Item ENTHARLIUM_GEM = new ItemBase("entharlium_gem", CreativeTabs.MATERIALS);
+	public static final Item TELEPORT_WAND = new ItemBase("teleport_wand", CreativeTabs.TOOLS);
 	
 	//Material
 	public static final ToolMaterial MATERIAL_ENTHARLIUM = EnumHelper.addToolMaterial("material_entharlium", 3, 3122, 12.0f, 6.0f, 10);

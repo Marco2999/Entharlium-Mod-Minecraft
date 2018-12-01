@@ -1,6 +1,8 @@
 
 //Items
 
+item.teleport_wand.name=Teleport Wand
+
 	//Materials
 item.entharlium_mix.name=Entharlium Mix
 item.entharlium_gem.name=Entharlium Gem

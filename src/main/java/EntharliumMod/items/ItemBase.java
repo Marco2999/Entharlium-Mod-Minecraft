@@ -8,7 +8,7 @@ import util.Main;
 
 public class ItemBase extends Item implements IHasModel {
 
-	public ItemBase(String name) {
+	public ItemBase(String name, CreativeTabs tools) {
 		
 		setUnlocalizedName(name);
 		setRegistryName(name);

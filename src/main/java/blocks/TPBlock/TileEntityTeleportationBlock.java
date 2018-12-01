@@ -135,8 +135,8 @@ public class TileEntityTeleportationBlock extends TileEntity implements ITickabl
 				TileEntityTeleportationBlock tele = (TileEntityTeleportationBlock)te;
 
 				if(!pos.equals(tele.pos)){ 
-					if (player.getHeldItemMainhand().getItem() == Items.STICK) {
-						if(pos.distanceSq(te.getPos().getX(), te.getPos().getY(), te.getPos().getZ()) <= 30) {
+					if (player.getHeldItemMainhand().getItem() == EntharliumMod.init.ModItems.TELEPORT_WAND) {
+						if(pos.distanceSq(te.getPos().getX(), te.getPos().getY(), te.getPos().getZ()) <= 5000) {
 							if(nearest == null) {
 							nearest = (TileEntityTeleportationBlock) te;			
 							player.setPosition(te.getPos().getX(), te.getPos().getY()+1, te.getPos().getZ());
@@ -145,8 +145,7 @@ public class TileEntityTeleportationBlock extends TileEntity implements ITickabl
 								nearest = (TileEntityTeleportationBlock) te;
 								player.setPosition(te.getPos().getX(), te.getPos().getY()+1, te.getPos().getZ());
 							}
-						}
-						
+						}					
 					}					
 				}
 			}

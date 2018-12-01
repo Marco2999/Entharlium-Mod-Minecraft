@@ -16,7 +16,7 @@ public class GuiTeleportationBlock extends GuiContainer{
 		super(new ContainerTeleportationBlock(playerInv, te));
 		
 		this.xSize = 176;
-		this.ySize= 166;
+		this.ySize = 166;
 		
 		this.te = te;
 		this.playerInv = playerInv;
