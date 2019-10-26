@@ -1,11 +1,15 @@
 package blocks.TPBlock;
 
+import EntharliumMod.init.ModItems;
 import blocks.BlockBase;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -41,7 +45,12 @@ public class TeleportationBlock extends BlockBase implements IHasModel, ITileEnt
 			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {	
 		getTileEntity(worldIn, pos).findNearestTeleportationBlock(pos, worldIn, getTileEntity(worldIn, pos).getId(), playerIn);
 		if(!worldIn.isRemote) {
-			playerIn.openGui(util.Main.instance, GuiHandler.TELEPORTATION_BLOCK, worldIn, pos.getX(), pos.getY(), pos.getZ());
+			
+		}
+
+		if (playerIn.inventory.getCurrentItem() != null && playerIn.inventory.getCurrentItem().getItem() == ModItems.TELEPORT_WAND) { 
+			playerIn.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("nausea"), 99, 9999999));
+
 		}
 		return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);
 

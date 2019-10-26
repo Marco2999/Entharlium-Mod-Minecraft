@@ -7,6 +7,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
@@ -31,7 +33,6 @@ public class TileEntityTeleportationBlock extends TileEntity implements ITickabl
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		nbt.setLong("usageLeft", usageLeft);
-//		nbt.setLong("id", id);
 
 		nbt.setTag("ItemStackHandler", this.handler.serializeNBT());
 
@@ -41,7 +42,7 @@ public class TileEntityTeleportationBlock extends TileEntity implements ITickabl
 	@Override
 	public void readFromNBT(NBTTagCompound nbt) {
 		usageLeft = (int) nbt.getLong("usageLeft");
-//		id = (int) nbt.getLong("id");
+
 
 		this.handler.deserializeNBT(nbt.getCompoundTag("ItemStackHandler"));
 
@@ -130,6 +131,7 @@ public class TileEntityTeleportationBlock extends TileEntity implements ITickabl
 
 	public TileEntityTeleportationBlock findNearestTeleportationBlock(BlockPos pos, World world,  int teleportID, EntityPlayer player){
 		TileEntityTeleportationBlock nearest = null;
+		
 		for(TileEntity te : world.loadedTileEntityList){
 			if(te instanceof TileEntityTeleportationBlock){
 				TileEntityTeleportationBlock tele = (TileEntityTeleportationBlock)te;

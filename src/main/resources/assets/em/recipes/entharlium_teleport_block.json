@@ -1,0 +1,34 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "EEE",
+        "EDE",
+        "EBE"
+    ],
+   
+    "key":
+    {
+        "E":
+        {
+            "item": "em:entharlium_gem"
+        },
+        
+         "B":
+        {
+            "item": "minecraft:diamond_block"
+        },
+        
+        "D":
+        {
+            "item": "minecraft:diamond"
+        }
+    },
+   
+    "result":
+    {
+        "item": "em:teleportation_block",
+        "count": 1
+    }
+}

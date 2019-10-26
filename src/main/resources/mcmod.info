@@ -2,7 +2,7 @@
 {
 	"modid": "em",
 	"name": "Entharlium Mod",
-	"description": "Entharlium things!",
+	"description": "Welcome to the era of Entharlium. \n This mod adds a new ore, Entharlium, found very rarely underground, or crafted by mixing Diamond and Emerald together, and putting the mix in the special furnace. This mod's main feature is the Teleport block. With a teleport wand in hand, you can right click this special block to teleport to the nearest other teleport block. \n Please give it a try!",
 	"version": "1.0",
 	"mc version": "1.12.2",
 	"url": "",
